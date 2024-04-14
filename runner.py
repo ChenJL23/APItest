@@ -1,9 +1,7 @@
 import unittest
 
-from htmltestreport import HTMLTestReport
-
-from rbp import TestRBP
-from test_rbp_login import TestRBPLogin
+from rbp.rbp import TestRBP
+from rbp.test_rbp_login import TestRBPLogin
 
 suite = unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestRBP))

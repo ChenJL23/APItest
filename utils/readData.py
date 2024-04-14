@@ -2,18 +2,19 @@ import json
 import os
 
 current_path = os.path.dirname(__file__)
-data_dir = os.path.dirname(current_path) + '\\data\\'
+proj_dir = os.path.dirname(current_path)
 
 
-def get_inrm_login_data():
-    with open(data_dir + 'ihrm_login.json', 'r', encoding='utf-8') as f:
+def get_data(filepath):
+    with open(proj_dir + filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
         data_list = []
         for itme in data:
-            data_list.append((itme['unname'], itme['pwd'], itme['code'], itme['message']))
+            tmp = tuple(itme.values())
+            data_list.append(tmp)
     return data_list
 
 
 if __name__ == '__main__':
-    login_data = get_inrm_login_data()
+    login_data = get_data('/data/ihrm_login.json')
     print(login_data)
