@@ -5,8 +5,8 @@ current_path = os.path.dirname(__file__)
 data_dir = os.path.dirname(current_path) + '\\data\\'
 
 
-def get_login_data():
-    with open(data_dir + 'login.json', 'r', encoding='utf-8') as f:
+def get_inrm_login_data():
+    with open(data_dir + 'ihrm_login.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
         data_list = []
         for itme in data:
@@ -15,5 +15,5 @@ def get_login_data():
 
 
 if __name__ == '__main__':
-    login_data = get_login_data()
+    login_data = get_inrm_login_data()
     print(login_data)

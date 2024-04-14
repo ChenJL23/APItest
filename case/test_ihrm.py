@@ -3,7 +3,7 @@ import unittest
 
 from parameterized import parameterized
 
-from utils.readData import get_login_data
+from utils.readData import get_inrm_login_data
 
 
 class TestIHrm(unittest.TestCase):
@@ -11,6 +11,6 @@ class TestIHrm(unittest.TestCase):
     def setUpClass(cls):
         cls.url = "https://ihrm2-test.itheima.net/"
 
-    @parameterized.expand(get_login_data())
+    @parameterized.expand(get_inrm_login_data())
     def test01_ihrm(self, unname, pwd, code, msg, expect):
         r = requests.get(self.url, json={})
