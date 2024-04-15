@@ -1,0 +1,14 @@
+[
+  {
+    "username": "admin",
+    "password": "password",
+    "status_code": 200,
+    "text": ""
+  },
+  {
+    "username": "admin",
+    "password": "123",
+    "status_code": 403,
+    "text": ""
+  }
+]
